@@ -36,18 +36,17 @@ Maltego – OSINT and asset relationship mapping
 Metasploit Framework – Exploitation and post-exploitation
 
 # Project Structure
-cyart-vapt-team/
-│
-├── Week 2/
-│   ├── Vulnerability_Scanning.md
-│   ├── Reconnaissance.md
-│   ├── Scanning_Enumeration.md
-│   ├── Exploitation.md
-│   ├── Post_Exploitation.md
-│   ├── Capstone_Report.md
-│   └── Screenshots/
-│
-└── README.md
+
+| Folder / File Name                 | Description                                                          |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| `cyart-vapt-team/`                 | Main GitHub repository for the VAPT project                          |
+| `Week 2/`                          | Contains all Week 2 VAPT documentation and evidence                  |
+| `Week 2/Vulnerability_Scanning.md` | Detailed report on vulnerability scanning techniques and results     |
+| `Week 2/Reconnaissance.md`         | OSINT and reconnaissance activities using WHOIS, Shodan, and Maltego |
+| `Week 2/Scanning_Enumeration.md`   | Network scanning and service enumeration findings                    |
+| `Week 2/Exploitation.md`           | Exploitation process using Metasploit framework                      |
+| `Week 2/Post_Exploitation.md`      | Post-exploitation analysis and impact assessment                     |
+| `Week 2/Capstone_Report.md`        | End-to-end VAPT cycle summary and conclusions                        |         |
 
 # Methodology Followed
 
