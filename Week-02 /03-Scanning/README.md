@@ -67,7 +67,7 @@ Server banner information was collected
 Web application testing was deferred to later phases
 
 # Validation Using Metasploit Auxiliary Modules
-Purpose
+ Purpose
 
 Metasploit auxiliary scanners were used to verify service availability and confirm scanning results from Nmap.
 
