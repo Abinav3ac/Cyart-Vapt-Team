@@ -66,9 +66,9 @@ What the vulnerability is
 
 How it was identified
 
-Why it is dangerous
+Why is it dangerous
 
-How it can be fixed
+How can it be fixed
 
 # 3. Remediation Plan
 
@@ -88,10 +88,13 @@ This section ensures that findings lead to measurable security improvement, not 
 
 All identified vulnerabilities were summarized in a table to allow quick prioritization.
 
-| Finding ID | Vulnerability        | CVSS Score | Remediation                                        |
-| ---------- | -------------------- | ---------- | -------------------------------------------------- |
-| F001       | SQL Injection        | 9.1        | Implement input validation and prepared statements |
-| F002       | Weak Password Policy | 7.5        | Enforce password complexity and rotation           |
+| Finding ID | Vulnerability           | CVSS Score | Severity | Remediation             |
+| ---------- | ----------------------- | ---------- | -------- | ----------------------- |
+| F-01       | SQL Injection           | 9.1        | Critical | Use prepared statements |
+| F-02       | Reflected XSS           | 6.1        | Medium   | Input sanitization      |
+| F-03       | Weak Session Management | 8.2        | High     | Secure cookies          |
+| F-04       | vsftpd Backdoor RCE     | 10.0       | Critical | Patch/remove service    |
+| F-05       | UnrealIRCd Backdoor RCE | 10.0       | Critical | Patch/remove service    |
 
 Helps management prioritize fixes
 
@@ -99,12 +102,7 @@ Links technical issues to risk levels
 
 Enables tracking of remediation progress
 
-# Visualization (Draw.io)
-Network Attack Path Diagram
-
-Draw.io was used to create a visual attack path diagram showing how an attacker progressed through the environment.
-
-The diagram illustrates:
+# The diagram illustrates:
 
 Attacker entry point
 
@@ -120,7 +118,7 @@ System-level access
 
 Makes complex attacks easy to understand
 
-Helps non-technical stakeholders grasp impact
+Helps non-technical stakeholders grasp the impact
 
 Supports risk-based decision making
 
@@ -129,8 +127,27 @@ Visuals significantly improve the effectiveness of security reporting.
 # Stakeholder Communication
 Technical Audience
 
-Detailed vulnerability explanations
+Input validation and output encoding are missing.
 
-Evidence-based findings
+Session management is insecure and easily abused.
 
-Configuration-level remediation steps
+Multiple services are outdated and vulnerable.
+
+Lack of defense-in-depth allows an exploit chaining
+
+Root-level compromise was achieved withoauthenticationation
+
+# Metrics & KPIs
+
+The following metrics were used to evaluate security posture:
+
+| Metric                           | Value   |
+| -------------------------------- | ------- |
+| Total Vulnerabilities Identified | 5       |
+| Critical Vulnerabilities         | 3       |
+| Successful Exploit Chains        | 2       |
+| Time to Initial Compromise       | Minutes |
+| Privilege Escalation Required    | No      |
+
+
+These metrics highlight the high risk and low attack complexity.
