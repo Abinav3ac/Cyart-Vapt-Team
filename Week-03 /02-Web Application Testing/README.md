@@ -71,10 +71,33 @@ SQL Injection Testing
 
 sqlmap was used to test input fields for SQL injection vulnerabilities.
 
-Example command:
+Command Used:
 
-sqlmap -u "http://192.168.56.101/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=<session_id>" --batch
+sqlmap -u "http://192.168.56.101/dvwa/vulnerabilities/sqli/?id=1" \
+--cookie="security=low; PHPSESSID=241ddec8f0893d80882073b765e5437" \
+--batch --level=2 --risk=2
 
+# Authentication & Input Validation Review
+
+The following weaknesses were observed:
+
+No server-side input validation
+
+No prepared statements
+
+Session tokens accessible via JavaScript
+
+No CSRF protection
+
+No rate limiting on requests
+
+These issues significantly increase the risk of:
+
+Data extraction
+
+Account compromise
+
+Privilege escalation
 
 # Result:
 
